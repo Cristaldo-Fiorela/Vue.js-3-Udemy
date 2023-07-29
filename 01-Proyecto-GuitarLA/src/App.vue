@@ -1,4 +1,11 @@
 <script setup>
+    import { ref, reactive } from 'vue';
+
+    const state = reactive({
+        guitarra: [1,2,3],
+    })
+
+    console.log(state.guitarra);
 </script>
 
 <template>
