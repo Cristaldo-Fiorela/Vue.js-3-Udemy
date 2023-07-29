@@ -1,8 +1,9 @@
 <script setup>
     import { ref, reactive } from 'vue';
+    import { db } from './data/guitarras'
 
     const state = reactive({
-        guitarra: [1,2,3],
+        guitarra: db,
     })
 
     console.log(state.guitarra);
