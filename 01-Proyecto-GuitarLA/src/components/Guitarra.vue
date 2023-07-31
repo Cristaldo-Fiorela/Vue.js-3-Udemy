@@ -10,9 +10,7 @@
     }
   });
 
-  const incrementar = () => {
-    numero.value++;
-  }
+  defineEmits(['agregar-carrito'])
 </script>
 
 <template>
@@ -36,7 +34,7 @@
     <button 
       type="button" 
       class="btn btn-dark w-100"
-      v-on:click="incrementar"
+      @:click="$emit('agregar-carrito')"
     >Agregar al Carrito</button>
   </div>
 </div>

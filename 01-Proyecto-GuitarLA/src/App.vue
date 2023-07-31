@@ -14,7 +14,9 @@ onMounted(() => {
   // state.guitarras = db; // utilizando reactive
 });
 
-
+const agregarCarrito = () => {
+    console.log('agregando...')
+  }
 </script>
 
 <template>
@@ -107,6 +109,7 @@ onMounted(() => {
       <Guitarra
         v-for="guitarra in guitarras"
         v-bind:guitarra="guitarra"
+        @agregar-carrito="agregarCarrito"
       />
     </div>
   </main>
