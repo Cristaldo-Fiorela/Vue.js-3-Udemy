@@ -13,6 +13,8 @@ onMounted(() => {
   guitarras.value = db; // utilizando ref
   // state.guitarras = db; // utilizando reactive
 });
+
+
 </script>
 
 <template>
