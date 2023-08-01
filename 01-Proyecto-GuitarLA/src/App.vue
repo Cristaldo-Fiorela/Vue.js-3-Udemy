@@ -4,6 +4,7 @@ import { db } from "./data/guitarras";
 import Guitarra from './components/Guitarra.vue';
 
 const guitarras = ref(db);
+const carrito = ref([]);
 // const state = reactive({
 //     guitarras: []
 // })
@@ -15,7 +16,8 @@ onMounted(() => {
 });
 
 const agregarCarrito = (guitarra) => {
-    console.log(guitarra);
+    guitarra.cantidad = 1;
+    carrito.value.push(guitarra);
   }
 </script>
 
