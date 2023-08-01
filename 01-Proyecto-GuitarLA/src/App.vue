@@ -14,8 +14,8 @@ onMounted(() => {
   // state.guitarras = db; // utilizando reactive
 });
 
-const agregarCarrito = () => {
-    console.log('agregando...')
+const agregarCarrito = (guitarra) => {
+    console.log(guitarra);
   }
 </script>
 
