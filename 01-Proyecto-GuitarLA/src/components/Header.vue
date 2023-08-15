@@ -5,6 +5,8 @@ const props = defineProps({
         required: true
     }
 })
+
+    defineEmits(['decrementar-cantidad', 'incrementar-cantidad' ])
 </script>
 
 <template >
@@ -47,7 +49,11 @@ const props = defineProps({
                                             <td>{{ producto.nombre }}</td>
                                             <td class="fw-bold">${{ producto.precio }}</td>
                                             <td class="flex align-items-start gap-4">
-                                                <button type="button" class="btn btn-dark">
+                                                <button 
+                                                    type="button" 
+                                                    class="btn btn-dark"
+                                                    @click="$emit('decrementar-cantidad')"
+                                                >
                                                     -
                                                 </button>
                                                     {{ producto.cantidad }}
@@ -56,7 +62,11 @@ const props = defineProps({
                                                 </button>
                                             </td>
                                             <td>
-                                                <button class="btn btn-danger" type="button">
+                                                <button 
+                                                    class="btn btn-danger" 
+                                                    type="button"
+                                                    @click="$emit('incrementar-cantidad')"
+                                                >
                                                     X
                                                 </button>
                                             </td>
