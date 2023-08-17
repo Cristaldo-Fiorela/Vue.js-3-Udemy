@@ -57,7 +57,11 @@ const props = defineProps({
                                                     -
                                                 </button>
                                                     {{ producto.cantidad }}
-                                                <button type="button" class="btn btn-dark">
+                                                <button 
+                                                    type="button" 
+                                                    class="btn btn-dark"
+                                                    @click="$emit('incrementar-cantidad', producto.id)"
+                                                >
                                                     +
                                                 </button>
                                             </td>
@@ -65,7 +69,6 @@ const props = defineProps({
                                                 <button 
                                                     class="btn btn-danger" 
                                                     type="button"
-                                                    @click="$emit('incrementar-cantidad', producto.id)"
                                                 >
                                                     X
                                                 </button>

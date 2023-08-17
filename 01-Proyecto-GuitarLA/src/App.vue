@@ -30,11 +30,15 @@ const agregarCarrito = (guitarra) => {
   }
 
   const decrementarCantidad = (id) => {
-    console.log(id);
+    const index = carrito.value.findIndex(producto => producto.id === id); //  retorna la posicion en el carrito de compras
+    carrito.value[index].cantidad--
   }
 
   const incrementarCantidad = (id) => {
-    console.log(id);
+    const index = carrito.value.findIndex(producto => producto.id === id); //  retorna la posicion en el carrito de compras
+    console.log(index);
+
+    carrito.value[index].cantidad++  
   }
 
 </script>
