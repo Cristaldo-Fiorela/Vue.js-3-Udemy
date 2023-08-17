@@ -29,12 +29,12 @@ const agregarCarrito = (guitarra) => {
     }
   }
 
-  const decrementarCantidad = () => {
-    console.log('Menos...');
+  const decrementarCantidad = (id) => {
+    console.log(id);
   }
 
-  const incrementarCantidad = () => {
-    console.log('Mas...');
+  const incrementarCantidad = (id) => {
+    console.log(id);
   }
 
 </script>
