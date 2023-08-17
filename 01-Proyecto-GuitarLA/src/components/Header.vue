@@ -3,6 +3,10 @@ const props = defineProps({
     carrito: {
         type: Array,
         required: true
+    },
+    guitarra: {
+        type: Object,
+        required: true
     }
 })
 

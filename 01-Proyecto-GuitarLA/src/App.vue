@@ -49,6 +49,7 @@ const agregarCarrito = (guitarra) => {
 <template>
   <Header
     :carrito="carrito"
+    :guitarra="guitarraBanner"
     @incrementar-cantidad="incrementarCantidad"
     @decrementar-cantidad="decrementarCantidad"
   />
