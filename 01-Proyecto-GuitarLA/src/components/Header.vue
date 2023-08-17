@@ -10,7 +10,7 @@ const props = defineProps({
     }
 })
 
-    defineEmits(['decrementar-cantidad', 'incrementar-cantidad' ])
+    defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito' ]);
 </script>
 
 <template >
@@ -104,7 +104,7 @@ const props = defineProps({
                     <button 
                         type="button" 
                         class="btn fs-4 bg-primary text-white py-2 px-5"
-                        
+                        @click="$emit('agregar-carrito', guitarra)"
                     >
                         Agregar al Carrito
                     </button>

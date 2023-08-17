@@ -52,6 +52,7 @@ const agregarCarrito = (guitarra) => {
     :guitarra="guitarraBanner"
     @incrementar-cantidad="incrementarCantidad"
     @decrementar-cantidad="decrementarCantidad"
+    @agregar-carrito="agregarCarrito"
   />
 
   <main class="container-xl mt-5">
