@@ -44,16 +44,12 @@ const agregarCarrito = (guitarra) => {
       guitarra.cantidad = 1;
       carrito.value.push(guitarra);
     }
-
-    guardarLocalStorage();
   }
 
   const decrementarCantidad = (id) => {
     const index = carrito.value.findIndex(producto => producto.id === id); //  retorna la posicion en el carrito de compras
     if(carrito.value[index].cantidad <= 1) return;
     carrito.value[index].cantidad--;
-
-    guardarLocalStorage();
   }
 
   const incrementarCantidad = (id) => {
@@ -61,19 +57,14 @@ const agregarCarrito = (guitarra) => {
     console.log(index);
     if(carrito.value[index].cantidad >= 5) return;
     carrito.value[index].cantidad++;
-
-    guardarLocalStorage();
   }
 
   const eliminarProducto = (id) => {
     carrito.value = carrito.value.filter(producto => producto.id !== id);
-
-    guardarLocalStorage();
   }
 
   const vaciarCarrito = () => {
     carrito.value = [];
-    guardarLocalStorage();
   }
 
 </script>
